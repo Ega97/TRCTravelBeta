@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/abu"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PilihMobil">
+
+    <android.support.v7.widget.Toolbar android:id="@+id/tittle_pilih_mobil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@color/bg"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:textSize="22dp"
+            android:text="Pilih Mobil"
+            android:textColor="@color/putih"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/pilih_mobil"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/abu"
+        tools:listitem="@layout/detail_mobil"/>
+
+</LinearLayout>

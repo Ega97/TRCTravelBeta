@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abu"
+    tools:context=".HomeFragment">
+
+
+    <include layout="@layout/action_bar"></include>
+
+    <RelativeLayout
+        android:layout_below="@id/tittle"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@color/bg">
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleimage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/profil_round"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/nama"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/putih"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/circleimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nancy Liyando"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:textSize="6pt"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/putih"
+            android:fontFamily="sans-serif"
+            android:layout_toRightOf="@id/circleimage"
+            android:layout_below="@id/nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:layout_height="270dp"
+            android:layout_marginTop="100dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundedcorner">
+
+                <TextView
+                    android:id="@+id/pilih_jam"
+                    android:padding="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:text="Pilih Jam"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundedcorner_input"/>
+
+                <TextView
+                    android:id="@+id/pilih_tanggal"
+                    android:layout_below="@+id/pilih_jam"
+                    android:padding="20dp"
+                    android:background="@drawable/roundedcorner_input"
+                    android:layout_margin="20dp"
+                    android:layout_width="match_parent"
+                    android:text="Pilih Tanggal"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/lanjut"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/buttonroundedcorner"
+                    android:text="Cari"
+                    android:textColor="@color/putih"
+                    android:layout_below="@id/pilih_tanggal"
+                    android:layout_alignRight="@id/pilih_jam"/>
+
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

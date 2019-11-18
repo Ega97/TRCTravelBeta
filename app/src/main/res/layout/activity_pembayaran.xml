@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pembayaran">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tittle_bayar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@color/bg"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:textSize="22dp"
+            android:text="Pembayaran"
+            android:textColor="@color/putih"
+            android:layout_gravity="center"
+            android:id="@+id/bayar_text" />
+
+    </android.support.v7.widget.Toolbar>
+    <include layout="@layout/part_pembayaran"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detail_harga"
+        android:layout_below="@id/tittle_bayar"/>
+    <TextView
+        android:id="@+id/bukti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*masukan bukti pembayaran"
+        android:textColor="#000"
+        android:textSize="37px"
+        android:layout_marginLeft="36dp"
+        android:layout_below="@id/detail_harga"
+        android:layout_alignParentLeft="true"/>
+    <Button
+        android:id="@+id/pilih_berkas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Berkas"
+        android:padding="16dp"
+        android:textSize="13dp"
+        android:textColor="@color/putih"
+        android:background="@drawable/roundedcorner_btn"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/bukti"/>
+    <TextView
+        android:id="@+id/buktifile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bukti.jpg"
+        android:textColor="#000"
+        android:textSize="37px"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="26dp"
+        android:layout_toRightOf="@id/pilih_berkas"
+        android:layout_below="@id/bukti"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonroundedcorner"
+        android:text="Konfirmasi"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:textColor="@color/putih"
+        android:layout_below="@id/pilih_berkas"/>
+</RelativeLayout>

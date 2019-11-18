@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/detail_mobil_dipilih"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/abu"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/gambar_mobil"
+                android:layout_centerVertical="true"
+                android:padding="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/text_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Bayar"
+                    android:textColor="#000"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/status_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Jumlah yang harus dibayar"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="12sp"
+                    android:layout_below="@id/text_total"/>
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF5370"
+                    android:text="Rp. 50000"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="3dp"
+                    android:textSize="12sp"
+                    android:layout_below="@id/text_total"
+                    android:layout_toRightOf="@id/status_txt"/>
+
+                <TextView
+                    android:id="@+id/rekening"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#54A5FF"
+                    android:text="Rekening Pembayaran : 3456709876 (BRI)"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="12sp"
+                    android:layout_below="@id/status"/>
+            </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

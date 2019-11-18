@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Konfirmasi">
+
+    <android.support.v7.widget.Toolbar android:id="@+id/tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@color/bg"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:textSize="22dp"
+            android:text="Konfirmasi"
+            android:textColor="@color/putih"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/text_konfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terkonfirmasi!"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:textColor="@color/bg"/>
+        <TextView
+            android:id="@+id/text_mohontunggu"
+            android:layout_below="@id/text_konfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mohon Tunggu"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:layout_centerVertical="true"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/mohontunggu2"
+            android:layout_below="@id/text_mohontunggu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Driver akan segera menghubungi"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:layout_centerVertical="true"
+            android:textColor="#000"/>
+        <ImageView
+            android:id="@+id/v_konfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/konfirmasi"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/mohontunggu2"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back Home"
+            android:layout_below="@id/v_konfirm"
+            android:background="@drawable/roundedcorner_btn"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/putih"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>
