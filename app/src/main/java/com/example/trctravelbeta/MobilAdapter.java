@@ -41,7 +41,7 @@ public class MobilAdapter extends RecyclerView.Adapter<MobilHolder> {
         mobilHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mobilHolder.itemView.getContext(), Pembayaran.class);
+                Intent intent = new Intent(mobilHolder.itemView.getContext(), DetailBooking.class);
                 Bundle b = new Bundle();
                 mobilHolder.itemView.getContext().startActivity(intent);
             }
@@ -67,7 +67,7 @@ public class MobilAdapter extends RecyclerView.Adapter<MobilHolder> {
 
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent (v.getContext(), Pembayaran.class);
+            Intent intent = new Intent (v.getContext(), DetailBooking.class);
 
         }
     }
