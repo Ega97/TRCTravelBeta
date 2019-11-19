@@ -2,12 +2,15 @@
     <string name="app_name">TRC Travel (Beta)</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string-array name="daftar_jalur">
-        <item><FONT COLOR="#ffff"></FONT> Balam - Liwa</item>
-        <item><FONT COLOR="#ffff"></FONT>Balam - Krui</item>
-        <item><FONT COLOR="#ffff"></FONT>Balam - Bukit Kemuning</item>
-        <item><FONT COLOR="#ffff"></FONT>Balam - Pringsewu</item>
-        <item><FONT COLOR="#ffff"></FONT>Balam - Metro</item>
-        <item><FONT COLOR="#ffff"></FONT>Balam - Bakauheni</item>
+    <string-array name="jalur">
+        <item><FONT COLOR="#ffff"></FONT>Bandar Lampung</item>
+        <item><FONT COLOR="#ffff"></FONT>Liwa</item>
+        <item><FONT COLOR="#ffff"></FONT>Krui</item>
+        <item><FONT COLOR="#ffff"></FONT>Bukit Kemuning</item>
+        <item><FONT COLOR="#ffff"></FONT>Pringsewu</item>
+        <item><FONT COLOR="#ffff"></FONT>Metro</item>
+        <item><FONT COLOR="#ffff"></FONT>Bakauheni</item>
     </string-array>
+
+
 </resources>
