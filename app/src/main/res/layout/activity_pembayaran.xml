@@ -28,7 +28,6 @@
 
     </android.support.v7.widget.Toolbar>
     <include layout="@layout/part_pembayaran"
-        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/detail_harga"
@@ -39,17 +38,17 @@
         android:layout_height="wrap_content"
         android:text="*masukan bukti pembayaran"
         android:textColor="#000"
-        android:textSize="37px"
+        android:textSize="20dp"
         android:layout_marginLeft="36dp"
         android:layout_below="@id/detail_harga"
         android:layout_alignParentLeft="true"/>
     <Button
         android:id="@+id/pilih_berkas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
         android:text="Pilih Berkas"
         android:padding="16dp"
-        android:textSize="13dp"
+        android:textSize="5dp"
         android:textColor="@color/putih"
         android:background="@drawable/roundedcorner_btn"
         android:layout_marginLeft="36dp"
@@ -67,6 +66,7 @@
         android:layout_toRightOf="@id/pilih_berkas"
         android:layout_below="@id/bukti"/>
     <Button
+        android:id="@+id/konfir_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/buttonroundedcorner"

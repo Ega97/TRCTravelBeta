@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@color/bg">
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleimage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/profil_round"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/nama"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/putih"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/circleimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nancy Liyando"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:textSize="6pt"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/putih"
+            android:fontFamily="sans-serif"
+            android:layout_toRightOf="@id/circleimage"
+            android:layout_below="@id/nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HistoryFragment">
+    android:background="@color/abu"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
 
-    <TextView
+
+    <include layout="@layout/action_bar"/>
+    <include layout="@layout/layout_profil"/>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Checkout Fragment"
-        android:gravity="center"
-        android:layout_centerInParent="true"
-        android:textSize="16sp"/>
+        android:layout_height="match_parent">
 
-</RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_booking"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/part_list_checkout">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

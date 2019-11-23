@@ -1,5 +1,6 @@
 package com.example.trctravelbeta;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ public class DetailBooking extends AppCompatActivity {
     private Button plusBtn;
     private Button resetBtn;
     private int counter;
+    private Button bookingSekarang;
 
     private View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
@@ -37,6 +39,14 @@ public class DetailBooking extends AppCompatActivity {
         plusBtn.setOnClickListener(onClickListener);
         resetBtn = (Button) findViewById(R.id.reset_kursi);
         resetBtn.setOnClickListener(onClickListener);
+        bookingSekarang = (Button) findViewById(R.id.booking_sekarang);
+        bookingSekarang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailBooking.this, DetailPenjemputan.class);
+                startActivity(intent);
+            }
+        });
 
         initCounter();
 

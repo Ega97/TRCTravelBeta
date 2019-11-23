@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/detail_mobil_dipilih"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     >
-    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:background="@color/abu"
         app:cardCornerRadius="8dp"
@@ -15,10 +17,9 @@
             android:id="@+id/layout_parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-        <RelativeLayout
+      ````  <RelativeLayout
             android:id="@+id/gambar_layout"
             android:layout_width="match_parent"
-            android:padding="15dp"
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/gambar_mobil"
@@ -66,8 +67,9 @@
         </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/layout_keberangkatan"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
                 android:layout_below="@id/gambar_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -92,9 +94,9 @@
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/layout_jam"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
                 android:layout_below="@id/layout_keberangkatan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -118,9 +120,9 @@
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/layout_penjemputan"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
                 android:layout_below="@id/layout_jam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -141,6 +143,32 @@
                     android:layout_height="wrap_content"
                     android:text="Jl. Soekarno Hatta No.16, Kampung
 Baru, Kota Bandar Lampung, Lampung"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/layout_harga"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_below="@id/layout_penjemputan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/harga_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:textSize="19sp"
+                    android:text="Total Harga "/>
+
+                <TextView
+                    android:id="@+id/jumlah_harga"
+                    android:layout_below="@+id/harga_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 500000"
                     android:textStyle="bold"/>
             </RelativeLayout>
         </RelativeLayout>

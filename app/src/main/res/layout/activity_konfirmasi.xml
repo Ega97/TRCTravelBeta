@@ -79,6 +79,7 @@
             android:layout_below="@id/v_konfirm"
             android:background="@drawable/roundedcorner_btn"
             android:padding="10dp"
+            android:id="@+id/back_home"
             android:layout_marginTop="20dp"
             android:textColor="@color/putih"
             android:layout_centerHorizontal="true"/>

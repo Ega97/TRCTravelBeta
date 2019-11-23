@@ -96,13 +96,20 @@
                 <Button
                     android:id="@+id/tambah_kursi"
                     android:layout_toRightOf="@id/kursi_count"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
+                    android:background="@drawable/roundedcorner_btn"
+                    android:textColor="@color/putih"
+                    android:textSize="26dp"
                     android:text="+"
                     android:layout_height="wrap_content" />
                 <Button
                     android:id="@+id/reset_kursi"
                     android:layout_toRightOf="@id/tambah_kursi"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/roundedcorner_btn"
+                    android:textColor="@color/putih"
+                    android:textSize="12dp"
                     android:text="Reset"
                     android:layout_height="wrap_content" />
 
