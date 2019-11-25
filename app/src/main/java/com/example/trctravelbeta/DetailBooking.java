@@ -43,7 +43,7 @@ public class DetailBooking extends AppCompatActivity {
         bookingSekarang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DetailBooking.this, DetailPenjemputan.class);
+                Intent intent = new Intent(DetailBooking.this, MainActivity.class);
                 startActivity(intent);
             }
         });

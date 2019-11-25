@@ -1,35 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/abu"
-    android:orientation="vertical"
     tools:context=".HomeFragment">
 
 
-    <include layout="@layout/action_bar"/>
-    <include layout="@layout/layout_profil"/>
-
+    <include
+        android:id="@+id/top" layout="@layout/action_bar"/>
+    <include layout="@layout/layout_profil"
+        android:layout_below="@id/top"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+    <RelativeLayout
+        android:background="@drawable/roundedcorner"
+        android:layout_marginTop="175dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="380dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_booking"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/part_list_checkout"></android.support.v7.widget.RecyclerView>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="visible"
+        android:scaleX="0.10"
+        android:scaleY="0.10"
+        android:textColor="@color/colorAccent"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"/>
+    </LinearLayout>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/list_booking"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:listitem="@layout/part_list_checkout">
-
-        </android.support.v7.widget.RecyclerView>
 
     </FrameLayout>
+    </RelativeLayout>
 
-
-
-</LinearLayout>
+</RelativeLayout>

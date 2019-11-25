@@ -2,7 +2,7 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="1dp"
+    android:layout_margin="5dp"
     app:cardCornerRadius="10dp"
     android:elevation="20dp"
     android:layout_height="wrap_content">
@@ -34,7 +34,7 @@
                 android:textSize="12dp"
                 android:text="Jl. Soekarno Hatta No 19"/>
             <TextView
-                android:id="@+id/jumlah_kursi"
+                android:id="@+id/kursi_dipesan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="10dp"
@@ -70,18 +70,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="12.00 WIB"/>
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Status :"/>
-            <TextView
-                android:id="@+id/status_bayar"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/hijau"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Terverifikasi"/>
+            <!--<TextView-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Status :"/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/status_bayar"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:textColor="@color/hijau"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Terverifikasi"/>-->
         </LinearLayout>
     </LinearLayout>
 

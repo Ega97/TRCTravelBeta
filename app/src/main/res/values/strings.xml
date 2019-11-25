@@ -12,5 +12,10 @@
         <item><FONT COLOR="#ffff"></FONT>Bakauheni</item>
     </string-array>
 
+    <string-array name="metode_bayar">
+        <item><FONT COLOR="#ffff"></FONT>Cash</item>
+        <item><FONT COLOR="#ffff"></FONT>Transfer</item>
+    </string-array>
+
 
 </resources>

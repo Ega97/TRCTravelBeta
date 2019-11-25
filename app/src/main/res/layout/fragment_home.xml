@@ -7,29 +7,23 @@
     android:layout_height="match_parent"
     android:background="@color/abu"
     tools:context=".HomeFragment">
-
-
     <include layout="@layout/action_bar"></include>
-
     <RelativeLayout
         android:layout_below="@id/tittle"
         android:layout_width="match_parent"
         android:layout_height="230dp"
         android:background="@color/bg">
-
     </RelativeLayout>
     <RelativeLayout
         android:layout_marginTop="80dp"
         android:layout_marginLeft="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/circleimage"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/profil_round"/>
-
         <TextView
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
@@ -42,7 +36,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nancy Liyando"/>
-
         <TextView
             android:id="@+id/status"
             android:textSize="6pt"
@@ -54,84 +47,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="User"/>
-
     </RelativeLayout>
-
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp">
         <FrameLayout
+            android:id="@+id/frame_home"
             android:layout_width="match_parent"
             android:layout_margin="15dp"
-            android:layout_height="470dp"
+            android:layout_height="430dp"
             android:layout_marginTop="100dp">
-            <RelativeLayout
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/roundedcorner">
 
-                <TextView
-                    android:id="@+id/pilih_jam"
-                    android:padding="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="20dp"
+                <android.support.v7.widget.RecyclerView
+                    android:layout_margin="5dp"
+                    android:id="@+id/list_tanggal"
+                    tools:listitem="@layout/list_tanggal"
                     android:layout_width="match_parent"
-                    android:text="Pilih Jam"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/roundedcorner_input"/>
-
-                <TextView
-                    android:id="@+id/pilih_tanggal"
-                    android:layout_below="@+id/pilih_jam"
-                    android:padding="20dp"
-                    android:background="@drawable/roundedcorner_input"
-                    android:layout_margin="20dp"
-                    android:layout_width="match_parent"
-                    android:text="Pilih Tanggal"
-                    android:layout_height="wrap_content"/>
-
-                <Spinner
-                    android:id="@+id/dari_mana"
-                    android:layout_below="@+id/pilih_tanggal"
-                    android:padding="20dp"
-                    android:background="@drawable/roundedcorner_input"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:entries="@array/jalur"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"/>
-
-                <Spinner
-                    android:id="@+id/mau_kemana"
-                    android:layout_below="@+id/dari_mana"
-                    android:padding="20dp"
-                    android:background="@drawable/roundedcorner_input"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="20dp"
-                    android:entries="@array/jalur"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"/>
-
-                <Button
-                    android:id="@+id/lanjut"
-                    android:layout_width="150dp"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/buttonroundedcorner"
-                    android:text="Cari"
-                    android:textColor="@color/putih"
-                    android:layout_below="@id/mau_kemana"
-                    android:layout_alignRight="@id/pilih_jam"/>
-
-
-            </RelativeLayout>
-
+                    android:layout_height="match_parent">
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
         </FrameLayout>
 
     </RelativeLayout>
-
-
 </RelativeLayout>

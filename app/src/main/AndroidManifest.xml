@@ -16,7 +16,7 @@
         <activity android:name=".DetailPenjemputan"></activity>
         <activity
             android:name=".PilihMobil"
-            android:screenOrientation="portrait" />
+            />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,95 +1,84 @@
 package com.example.trctravelbeta;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
 
+import com.example.trctravelbeta.adapter.CarAdapter;
+import com.example.trctravelbeta.adapter.JadwalAdapter;
+import com.example.trctravelbeta.model_car.mJadwal;
+import com.example.trctravelbeta.model_car.mMessage;
+
 import java.text.DateFormat;
 import java.util.Calendar;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
+public class HomeFragment extends Fragment{
 
-
+    private JadwalAdapter jadwalAdapter;
+    private RecyclerView recyclerView;
+    private Context context;
     public HomeFragment() {
         // Required empty public constructor
     }
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-        Button btnLanjut = (Button) rootView.findViewById(R.id.lanjut);
-        final DatePickerDialog.OnDateSetListener onDate = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int monthOfYear,
-                                  int dayOfMonth) {
-                TextView tvDate = (TextView) getActivity().findViewById(R.id.pilih_tanggal);
-                tvDate.setText("Tanggal" + " " + String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear)
-                        + "-" + String.valueOf(year));
-            }
-        };
-        btnLanjut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                lanjutPesan();
-            }
-        });
-        final TextView pickDate = (TextView) rootView.findViewById(R.id.pilih_tanggal);
-        pickDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DialogFragment datePicker = new DatePickerFragment().newInstance();
-                ((DatePickerFragment) datePicker).setCallBack(onDate);
-                datePicker.show(getFragmentManager().beginTransaction(),"Date Picker");
-            }
-        });
-        final TimePickerDialog.OnTimeSetListener onTime =  new TimePickerDialog.OnTimeSetListener() {
-            @Override
-            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                TextView tvTime = (TextView) getActivity().findViewById(R.id.pilih_jam);
-                tvTime.setText("Pukul" + " " + String.valueOf(hourOfDay) + " " + ":" + " " + String.valueOf(minute) + " " + "WIB");
-            }
-        };
-        final TextView pickTime = (TextView) rootView.findViewById(R.id.pilih_jam);
-        pickTime.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DialogFragment timePicker = new TimePickerFragment().newInstances();
-                ((TimePickerFragment) timePicker).setCallBacks(onTime);
-                timePicker.show(getFragmentManager().beginTransaction(),"Time Picker");
-            }
-        });
-
+        recyclerView = rootView.findViewById(R.id.list_tanggal);
+        final FragmentActivity c = getActivity();
+        LinearLayoutManager layoutManager = new LinearLayoutManager(c);
+        recyclerView.setLayoutManager(layoutManager);
+        getDateResponse();
         return rootView;
     }
 
+    private void getDateResponse() {
 
-    @Override
-    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-        Calendar c = Calendar.getInstance();
-        c.set(Calendar.YEAR, year);
-        c.set(Calendar.MONTH,month);
-        c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-        String currentDateString = DateFormat.getDateInstance(DateFormat.FULL).format(c.getTime());
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.43.135:3000/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        CarInterfaces requestInterface = retrofit.create(CarInterfaces.class);
+        Call<mMessage> exampleCall= requestInterface.getData();
+        exampleCall.enqueue(new Callback<mMessage>() {
+            @Override
+            public void onResponse(Call<mMessage> call, Response<mMessage> response) {
+                if (response.isSuccessful()) {
+                    List<mJadwal> datax = response.body().getData();
+                    jadwalAdapter = new JadwalAdapter(getActivity().getApplicationContext(), datax);
+                    recyclerView.setAdapter(jadwalAdapter);
+                    jadwalAdapter.notifyDataSetChanged();
+                }
+            }
 
-        TextView textView = (TextView) view.findViewById(R.id.pilih_tanggal);
-        textView.setText(currentDateString);
+            @Override
+            public void onFailure(Call<mMessage> call, Throwable t) {
+
+            }
+        });
     }
-    public void lanjutPesan() {
-        Intent intent = new Intent(getActivity(), PilihMobil.class);
-        startActivity(intent);
-    }
-
-
 }

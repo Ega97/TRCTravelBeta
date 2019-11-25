@@ -29,11 +29,14 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <android.support.v7.widget.CardView
+    <ScrollView
         android:layout_below="@+id/detail_booking_tittle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp">
+        android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -41,18 +44,28 @@
 
             <EditText
                 android:id="@+id/nama_pemesan"
-                android:padding="20dp"
-                android:layout_margin="10dp"
-                android:hint="Nama Pemesan"
+                android:padding="15dp"
+                android:layout_margin="5dp"
+                android:hint="Customer Id"
+                android:background="@drawable/roundedcorner_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/jadwal_id"
+                android:layout_below="@id/nama_pemesan"
+                android:padding="15dp"
+                android:layout_margin="5dp"
+                android:hint="Jadwal Id"
                 android:background="@drawable/roundedcorner_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
+
             <EditText
                 android:id="@+id/no_hp"
-                android:layout_below="@id/nama_pemesan"
-                android:padding="20dp"
-                android:layout_margin="10dp"
+                android:layout_below="@id/jadwal_id"
+                android:padding="15dp"
+                android:layout_margin="5dp"
                 android:hint="Nomor HP"
                 android:background="@drawable/roundedcorner_input"
                 android:layout_width="match_parent"
@@ -61,8 +74,8 @@
             <EditText
                 android:id="@+id/titik_jemput"
                 android:layout_below="@+id/no_hp"
-                android:padding="20dp"
-                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:layout_margin="5dp"
                 android:hint="Titik Jemput"
                 android:background="@drawable/roundedcorner_input"
                 android:layout_width="match_parent"
@@ -71,31 +84,65 @@
             <EditText
                 android:id="@+id/detail_alamat"
                 android:layout_below="@+id/titik_jemput"
-                android:padding="20dp"
-                android:layout_margin="10dp"
-                android:hint="Detail Alamat"
+                android:padding="15dp"
+                android:layout_margin="5dp"
+                android:hint="Detail Tujuan"
                 android:background="@drawable/roundedcorner_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
+            <Spinner
+                android:id="@+id/metode_bayar"
+                android:layout_below="@+id/detail_alamat"
+                android:background="@drawable/roundedcorner_input"
+                android:padding="15dp"
+                android:layout_margin="5dp"
+                android:entries="@array/metode_bayar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/total_bayar"
+                android:padding="15dp"
+                android:textSize="17dp"
+                android:layout_margin="5dp"
+                android:layout_below="@id/metode_bayar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rp. 50000"
+                android:background="@drawable/roundedcorner_input"
+                />
+
             <RelativeLayout
                 android:id="@+id/layout_kursi"
-                android:layout_below="@id/detail_alamat"
+                android:layout_below="@id/total_bayar"
                 android:layout_width="match_parent"
-                android:gravity="center"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:gravity="left"
+                android:background="@drawable/roundedcorner_input"
                 android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/kursi_count"
                     android:text="1"
-                    android:textSize="24dp"
+                    android:layout_toRightOf="@id/tambah_kursi"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:text="Kursi"
+                    android:layout_toRightOf="@id/kursi_count"
+                    android:textSize="17dp"
                     android:layout_margin="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     />
                 <Button
                     android:id="@+id/tambah_kursi"
-                    android:layout_toRightOf="@id/kursi_count"
+                    android:layout_marginRight="10dp"
                     android:layout_width="60dp"
                     android:background="@drawable/roundedcorner_btn"
                     android:textColor="@color/putih"
@@ -104,9 +151,9 @@
                     android:layout_height="wrap_content" />
                 <Button
                     android:id="@+id/reset_kursi"
-                    android:layout_toRightOf="@id/tambah_kursi"
+                    android:layout_toLeftOf="@id/tambah_kursi"
                     android:layout_width="60dp"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:background="@drawable/roundedcorner_btn"
                     android:textColor="@color/putih"
                     android:textSize="12dp"
@@ -119,8 +166,8 @@
                 android:id="@+id/booking_sekarang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="17dp"
-                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:layout_margin="5dp"
                 android:text="Booking Sekarang!"
                 android:textColor="@color/putih"
                 android:layout_below="@id/layout_kursi"
@@ -131,5 +178,5 @@
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
-
+    </ScrollView>
 </RelativeLayout>
