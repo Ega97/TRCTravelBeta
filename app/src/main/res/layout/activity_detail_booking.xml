@@ -51,19 +51,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <EditText
-                android:id="@+id/titik_jemput"
-                android:layout_below="@+id/no_hp"
+
+            <AutoCompleteTextView
+                android:id="@+id/loc"
                 android:padding="15dp"
                 android:layout_margin="5dp"
+                android:layout_below="@+id/no_hp"
+                android:layout_width="match_parent"
                 android:hint="Titik Jemput"
                 android:background="@drawable/roundedcorner_input"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <EditText
                 android:id="@+id/detail_tujuan"
-                android:layout_below="@+id/titik_jemput"
+                android:layout_below="@+id/loc"
                 android:padding="15dp"
                 android:layout_margin="5dp"
                 android:hint="Detail Tujuan"

@@ -5,12 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.trctravelbeta.adapter.JadwalAdapter;
+import com.example.trctravelbeta.adapter.PlaceAutoSuggestAdapter;
 import com.example.trctravelbeta.model_post_booking.pInduk;
 
 import java.text.NumberFormat;
@@ -25,8 +27,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class DetailBooking extends AppCompatActivity {
 
 
-    private EditText iCustid, iJadwalid, iNohp, iTitikjemput, iDetailtujuan, iMetodebayar;
+    private EditText iCustid, iJadwalid, iNohp, iDetailtujuan, iMetodebayar;
     private TextView iTotalbayar, iJumlahkursi;
+    private AutoCompleteTextView iTitikjemput;
     SharedPrefManager sharedPrefManager;
     private int  totals;
     private Button plusBtn;
@@ -55,11 +58,12 @@ public class DetailBooking extends AppCompatActivity {
         setContentView(R.layout.activity_detail_booking);
 
         iNohp = findViewById(R.id.no_hp);
-        iTitikjemput =  findViewById(R.id.titik_jemput);
         iDetailtujuan=  findViewById(R.id.detail_tujuan);
         iMetodebayar =  findViewById(R.id.metode_bayar);
         iTotalbayar = findViewById(R.id.total_bayar);
         iJumlahkursi = findViewById(R.id.kursi_count);
+        iTitikjemput = findViewById(R.id.loc);
+        iTitikjemput.setAdapter(new PlaceAutoSuggestAdapter(DetailBooking.this, android.R.layout.simple_list_item_1));
 
         Locale locale = new Locale("in", "ID");
         NumberFormat format = NumberFormat.getCurrencyInstance(locale);
