@@ -7,17 +7,15 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-
-import com.example.trctravelbeta.adapter.JadwalAdapter;
 import com.example.trctravelbeta.adapter.PesananAdapter;
 import com.example.trctravelbeta.model_pesanan.pDatum;
 import com.example.trctravelbeta.model_pesanan.pExample;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -35,7 +33,7 @@ public class HistoryFragment extends Fragment {
     private ProgressBar load;
     private PesananAdapter pesananAdapter;
     private RecyclerView recyclerView;
-    private Context context;
+    SharedPrefManager sharedPrefManager;
 
     public HistoryFragment() {
         // Required empty public constructor
@@ -47,11 +45,12 @@ public class HistoryFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_history, container, false);
-        load = (ProgressBar) rootView.findViewById(R.id.progressBar);
+        load = rootView.findViewById(R.id.progressBar);
         recyclerView = rootView.findViewById(R.id.list_booking);
         recyclerView.setVisibility(View.GONE);
         load.setVisibility(View.VISIBLE);
         final FragmentActivity c = getActivity();
+        sharedPrefManager = new SharedPrefManager(getContext());
         LinearLayoutManager layoutManager = new LinearLayoutManager(c);
         recyclerView.setLayoutManager(layoutManager);
         getPesanResponse();
@@ -59,12 +58,15 @@ public class HistoryFragment extends Fragment {
     }
 
     private void getPesanResponse() {
+
+        int id = sharedPrefManager.getID();
+        Log.d("TAG", "Isi ID" +id);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://192.168.43.135:3000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         CarInterfaces requestInterface = retrofit.create(CarInterfaces.class);
-        Call<pExample> exampleCall= requestInterface.getPesan();
+        Call<pExample> exampleCall= requestInterface.getPesan(id);
         exampleCall.enqueue(new Callback<pExample>() {
             @Override
             public void onResponse(Call<pExample> call, Response<pExample> responses) {

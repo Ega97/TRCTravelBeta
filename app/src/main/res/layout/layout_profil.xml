@@ -33,7 +33,7 @@
             android:layout_toRightOf="@id/circleimage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nancy Liyando"/>
+            android:text="Penumpang"/>
 
         <TextView
             android:id="@+id/status"

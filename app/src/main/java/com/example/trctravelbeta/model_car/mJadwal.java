@@ -47,8 +47,6 @@ public class mJadwal {
     @Expose
     private mCar car;
 
-
-
     public Integer getId() {
         return id;
     }

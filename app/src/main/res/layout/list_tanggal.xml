@@ -15,6 +15,49 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Jalur Keberangkatan :"
+            android:textSize="12dp"
+            android:textColor="#666666"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/origin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bandar Lampung"
+                android:textSize="12dp"
+                android:textColor="@color/bg"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="12dp"
+                android:textColor="@color/bg"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/destination"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Liwa"
+                android:textSize="12dp"
+                android:textColor="@color/bg"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Tanggal Keberangkatan :"
             android:textSize="12dp"
             android:textColor="#666666"

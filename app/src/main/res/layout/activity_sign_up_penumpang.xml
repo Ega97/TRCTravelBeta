@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpPenumpang">
+
+    <RelativeLayout
+        android:background="@color/bg"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create New Account"
+            android:textSize="25dp"
+            android:textColor="@color/putih"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_daftar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:elevation="2dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/roundedcorner">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <EditText
+            android:background="@drawable/roundedcorner_input"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:hint="Nama anda"
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:background="@drawable/roundedcorner_input"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:hint="Hp anda"
+            android:id="@+id/hp"
+            android:layout_below="@id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:background="@drawable/roundedcorner_input"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:hint="Usernamel baru"
+            android:id="@+id/username_daftar"
+            android:layout_below="@id/hp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:background="@drawable/roundedcorner_input"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:hint="Password baru"
+            android:id="@+id/password_daftar"
+            android:layout_below="@+id/username_daftar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+    <Button
+        android:id="@+id/daftar"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/layout_daftar"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/roundedcorner_btn"
+        android:text="Daftar Sekarang"
+        android:textColor="@color/putih"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

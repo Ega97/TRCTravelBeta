@@ -43,6 +43,9 @@ public class pJadwal {
     @SerializedName("updatedAt")
     @Expose
     private String updatedAt;
+    @SerializedName("Car")
+    @Expose
+    private pCar car;
 
     public Integer getId() {
         return id;
@@ -146,5 +149,13 @@ public class pJadwal {
 
     public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public pCar getCar() {
+        return car;
+    }
+
+    public void setCar(pCar car) {
+        this.car = car;
     }
 }

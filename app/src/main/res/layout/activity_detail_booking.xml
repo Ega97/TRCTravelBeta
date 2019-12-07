@@ -43,27 +43,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/nama_pemesan"
-                android:padding="15dp"
-                android:layout_margin="5dp"
-                android:hint="Customer Id"
-                android:background="@drawable/roundedcorner_input"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <EditText
-                android:id="@+id/jadwal_id"
-                android:layout_below="@id/nama_pemesan"
-                android:padding="15dp"
-                android:layout_margin="5dp"
-                android:hint="Jadwal Id"
-                android:background="@drawable/roundedcorner_input"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-
-            <EditText
                 android:id="@+id/no_hp"
-                android:layout_below="@id/jadwal_id"
                 android:padding="15dp"
                 android:layout_margin="5dp"
                 android:hint="Nomor HP"
@@ -82,7 +62,7 @@
                 android:layout_height="wrap_content" />
 
             <EditText
-                android:id="@+id/detail_alamat"
+                android:id="@+id/detail_tujuan"
                 android:layout_below="@+id/titik_jemput"
                 android:padding="15dp"
                 android:layout_margin="5dp"
@@ -91,13 +71,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <Spinner
+            <EditText
                 android:id="@+id/metode_bayar"
-                android:layout_below="@+id/detail_alamat"
+                android:layout_below="@+id/detail_tujuan"
                 android:background="@drawable/roundedcorner_input"
                 android:padding="15dp"
                 android:layout_margin="5dp"
-                android:entries="@array/metode_bayar"
+                android:hint="Metode bayar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <TextView
@@ -108,7 +88,7 @@
                 android:layout_below="@id/metode_bayar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Rp. 50000"
+                android:text="50000"
                 android:background="@drawable/roundedcorner_input"
                 />
 

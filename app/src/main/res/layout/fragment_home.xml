@@ -15,8 +15,9 @@
         android:background="@color/bg">
     </RelativeLayout>
     <RelativeLayout
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="50dp"
+        android:id="@+id/layout_profil"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <de.hdodenhof.circleimageview.CircleImageView
@@ -35,7 +36,7 @@
             android:layout_toRightOf="@id/circleimage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nancy Liyando"/>
+            android:text="Penumpang"/>
         <TextView
             android:id="@+id/status"
             android:textSize="6pt"
@@ -48,6 +49,15 @@
             android:layout_height="wrap_content"
             android:text="User"/>
     </RelativeLayout>
+    <TextView
+        android:layout_below="@id/layout_profil"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/putih"
+        android:textStyle="bold"
+        android:text="Informasi Keberangkatan Travel"/>
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,6 +83,5 @@
                 </android.support.v7.widget.RecyclerView>
             </LinearLayout>
         </FrameLayout>
-
     </RelativeLayout>
 </RelativeLayout>

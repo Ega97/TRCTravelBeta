@@ -1,24 +1,14 @@
 package com.example.trctravelbeta;
 
-import android.content.Context;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 import com.example.trctravelbeta.adapter.CarAdapter;
 import com.example.trctravelbeta.model_car.mJadwal;
 import com.example.trctravelbeta.model_car.mMessage;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import retrofit2.Call;
@@ -30,9 +20,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class PilihMobil extends AppCompatActivity {
 
 
-    private Context context;
     private CarAdapter carAdapter;
     private RecyclerView recyclerView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

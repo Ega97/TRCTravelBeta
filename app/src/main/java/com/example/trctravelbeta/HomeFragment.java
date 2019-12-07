@@ -41,7 +41,7 @@ public class HomeFragment extends Fragment{
 
     private JadwalAdapter jadwalAdapter;
     private RecyclerView recyclerView;
-    private Context context;
+
     public HomeFragment() {
         // Required empty public constructor
     }

@@ -13,4 +13,8 @@
         android:title="Profil"
         android:icon="@drawable/profil"/>
 
+    <item android:id="@+id/info"
+        android:title="Info"
+        android:icon="@drawable/booking"/>
+
 </menu>

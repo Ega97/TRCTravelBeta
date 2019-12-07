@@ -7,15 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<android.support.design.widget.BottomNavigationView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/btm_nav"
-    android:background="@color/bg"
-    app:itemIconTint="@color/putih"
-    app:itemTextColor="@color/putih"
-    android:layout_alignParentBottom="true"
-    app:menu="@menu/bottom_nav"/>
+    <android.support.design.widget.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btm_nav"
+        android:background="@color/bg"
+        app:itemIconTint="@color/putih"
+        app:itemTextColor="@color/putih"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav"/>
 
     <FrameLayout
         android:id="@+id/frame_layout"

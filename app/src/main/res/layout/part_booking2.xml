@@ -12,7 +12,7 @@
         app:cardCornerRadius="8dp"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
-        android:layout_height="350dp">
+        android:layout_height="385dp">
         <RelativeLayout
             android:id="@+id/layout_parent"
             android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:id="@+id/merk_mobil"
+                    android:id="@+id/origin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Kota Bumi"
@@ -46,14 +46,14 @@
                     android:layout_marginLeft="10dp"
                     />
                 <TextView
-                    android:id="@+id/plat_mobil"
+                    android:id="@+id/detail_tujuan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Jl. Raya Abung Timur,"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
                     android:textSize="14sp"
-                    android:layout_below="@id/merk_mobil"/>
+                    android:layout_below="@id/origin"/>
             </RelativeLayout>
             <View
                 android:id="@+id/batas"
@@ -66,11 +66,38 @@
 
         </RelativeLayout>
             <RelativeLayout
-                android:id="@+id/layout_keberangkatan"
+                android:id="@+id/orang"
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="18dp"
                 android:layout_marginRight="18dp"
                 android:layout_below="@id/gambar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:textSize="19sp"
+                    android:text="Ega Liyando"/>
+
+                <TextView
+                    android:id="@+id/telp"
+                    android:layout_below="@+id/nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="09875565555"
+                    android:textColor="@color/hijau"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/layout_keberangkatan"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_below="@id/orang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -84,7 +111,7 @@
                     android:text="Keberangkatan"/>
 
                 <TextView
-                    android:id="@+id/get_keberangkatan"
+                    android:id="@+id/tgl_keberangkatan"
                     android:layout_below="@+id/text_keberangkatan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
